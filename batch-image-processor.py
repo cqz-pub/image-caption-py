@@ -39,7 +39,7 @@ def get_tags(image, processor, model, candidate_labels):
     return [label for prob, label in zip(probs[0], candidate_labels) if prob > 0.3]
 
 
-def process_batch(image_paths, processors, models, batch_size=4):
+def process_batch(image_paths, models, batch_size=4):
     caption_processor, caption_model, tag_processor, tag_model = models
     results = []
 
